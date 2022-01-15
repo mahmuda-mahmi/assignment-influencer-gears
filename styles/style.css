@@ -26,7 +26,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-.head-name {
+.nav-name {
   font-size: 16px;
 }
 nav a {
@@ -41,7 +41,7 @@ nav a {
  main content style start
 ---------------------*/
 
-.container {
+.top-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 0 auto;
@@ -233,8 +233,24 @@ media query
 
 /* for mobile devices  */
 
-@media only screen and (max-width: 576px) {
-   {
+@media only screen and (max-width: 688px) {
+  .nav-bar {
+    display: none;
+  }
+  .content {
     width: 100%;
+  }
+  .container,
+  .product-container,
+  .login-container,
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .top-container,
+  .products,
+  .button,
+  .login-container,
+  .footer {
+    flex-direction: column;
   }
 }
